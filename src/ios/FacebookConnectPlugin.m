@@ -114,6 +114,19 @@
     [self.commandDelegate sendPluginResult:res callbackId:command.callbackId];
 }
 
+- (void)setAutoInitEnabled:(CDVInvokedUrlCommand *)command {
+    BOOL enabled = [command.arguments objectAtIndex:0];
+    [FBSDKSettings setAutoInitEnabled:enabled];
+    CDVPluginResult *res = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    [self.commandDelegate sendPluginResult:res callbackId:command.callbackId];
+}
+
+- (void)initializeSDK:(CDVInvokedUrlCommand *)command {
+
+    [FBSDKApplicationDelegate initializeSDK:nil];
+    
+}
+
 - (void)logEvent:(CDVInvokedUrlCommand *)command {
     if ([command.arguments count] == 0) {
         // Not enough arguments

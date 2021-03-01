@@ -22,6 +22,8 @@
 - (void)setAutoLogAppEventsEnabled:(CDVInvokedUrlCommand *)command;
 - (void)setAdvertiserIDCollectionEnabled:(CDVInvokedUrlCommand *)command;
 - (void)setAdvertiserTrackingEnabled:(CDVInvokedUrlCommand *)command;
+- (void)setAutoInitEnabled:(CDVInvokedUrlCommand *)command;
+- (void)initializeSDK:(CDVInvokedUrlCommand *)command;
 - (void)logEvent:(CDVInvokedUrlCommand *)command;
 - (void)logPurchase:(CDVInvokedUrlCommand *)command;
 - (void)login:(CDVInvokedUrlCommand *)command;
