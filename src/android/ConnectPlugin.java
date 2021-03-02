@@ -514,6 +514,12 @@ public class ConnectPlugin extends CordovaPlugin {
         callbackContext.success();
     }
 
+    private void executeSetAutoInitEnabled(JSONArray args, CallbackContext callbackContext) {
+        boolean enabled = args.optBoolean(0);
+        FacebookSdk.setAutoInitEnabled(enabled);
+        callbackContext.success();
+    }
+
     private void executeLogEvent(JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (args.length() == 0) {
             // Not enough parameters
