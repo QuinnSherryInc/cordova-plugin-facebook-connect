@@ -278,6 +278,10 @@ public class ConnectPlugin extends CordovaPlugin {
           executeSetAdvertiserIDCollectionEnabled(args, callbackContext);
           return true;
 
+        } else if(action.equals("setAutoInitEnabled")) {
+          executeSetAutoInitEnabled(args, callbackContext);
+          return true;
+
         } else if (action.equals("logEvent")) {
             executeLogEvent(args, callbackContext);
             return true;
